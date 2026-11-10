@@ -43,7 +43,7 @@ Usamos `GET /films` (lista com título, diretor, ano, duração, nota Rotten Tom
 | Persistência local (Room) | `data/AppDatabase.kt`, `Usuario`/`UsuarioDao`, `Favorito`/`FavoritoDao`. Favoritos pertencem ao `usuarioId` logado e guardam uma cópia do filme, então abrem **offline**. |
 | Navegação | `userinterface/AppNavigation.kt`: barra inferior com **4 abas** (Início, Buscar, Favoritos, Perfil), fluxo Login → app, e `DetailRoute(movieId)` **type-safe** para a tela de detalhe. |
 
-## Estrutura de pacotes (`arthur.example.projeto_final`)
+## Estrutura de pacotes
 
 ```
 ├─ network        GhibliApi, FilmDto, RetrofitInstance
