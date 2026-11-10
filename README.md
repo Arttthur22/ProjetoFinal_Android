@@ -23,14 +23,14 @@ Usamos `GET /films` (lista com título, diretor, ano, duração, nota Rotten Tom
 ## Divisão de tarefas
 | Integrante | O que fez |
 |------------|-----------|
-| _Arthur Raymundo_ | _network e data: Retrofit, Room, Repositories e usuários_ |
-| _Giovana Simões_ | _viewmodel e userinterface: telas e navegação_ |
-| _Gustavo Lopes_ | _Wireframe_ |
+| _Arthur Raymundo_ | _API com Retrofit, banco Room, Repositories, login com hash e sessão_ |
+| _Giovana Simões_ | _Wireframe no Figma, ReadME e prints_ |
+| _Gustavo Lopes_ | _ViewModels, telas em Compose e navegação_ |
 
 ## O que aprendemos
-- _Arthur Raymundo:_ uma frase sobre a sua parte.
-- _Giovana Simões:_ uma frase sobre a sua parte.
-- _Gustavo Lopes:_ uma frase sobre a sua parte.
+- _Arthur Raymundo:_ Aprendi a ligar API e banco por meio do Repository e a proteger a senha com hash.
+- _Giovana Simões:_ Aprendi que um bom wireframe guia todo o desenvolvimento do app.
+- _Gustavo Lopes:_ Aprendi a fazer telas em Compose que reagem ao estado do ViewModel.
 
 ---
 
