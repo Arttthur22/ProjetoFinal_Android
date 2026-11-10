@@ -66,6 +66,3 @@ Regra de Dependência conferida: nenhuma busca por `import retrofit2` em `userin
 3. Para testar o estado de erro, ligue o **modo avião** e toque em "Tentar novamente".
 
 Testes unitários: `./gradlew test` (validação e hash).
-
-## Roteiro de teste (igual ao do professor)
-criar conta → entrar com senha errada → entrar corretamente → percorrer as abas → abrir um detalhe → favoritar → modo avião (estado de erro) → fechar e reabrir (continua logado, favorito salvo) → Sair → entrar com outra conta (favoritos não se misturam).
