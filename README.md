@@ -23,12 +23,14 @@ Usamos `GET /films` (lista com título, diretor, ano, duração, nota Rotten Tom
 ## Divisão de tarefas
 | Integrante | O que fez |
 |------------|-----------|
-| _Nome 1_ | _network e data: Retrofit, Room, Repositories e usuários_ |
-| _Nome 2_ | _viewmodel e userinterface: telas e navegação_ |
+| _Arthur Raymundo_ | _network e data: Retrofit, Room, Repositories e usuários_ |
+| _Giovana Simões_ | _viewmodel e userinterface: telas e navegação_ |
+| _Gustavo Lopes_ | _Wireframe_ |
 
 ## O que aprendemos
-- _Nome 1:_ uma frase sobre a sua parte.
-- _Nome 2:_ uma frase sobre a sua parte.
+- _Arthur Raymundo:_ uma frase sobre a sua parte.
+- _Giovana Simões:_ uma frase sobre a sua parte.
+- _Gustavo Lopes:_ uma frase sobre a sua parte.
 
 ---
 
