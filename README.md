@@ -14,8 +14,8 @@ Usamos `GET /films` (lista com título, diretor, ano, duração, nota Rotten Tom
 
 | Login | Cadastro | Lista |
 |---|---|---|
-| <img width="331" height="784" alt="image" src="https://github.com/user-attachments/assets/20ad3803-d283-4789-9d3c-d7a83d9357b5" />
- | <img width="346" height="781" alt="image" src="https://github.com/user-attachments/assets/5d26278d-e8c5-4a1d-9288-034e2587278c" />
+| <img width="331" height="784" alt="image" src="https://github.com/user-attachments/assets/20ad3803-d283-4789-9d3c-d7a83d9357b5" /> | <img width="346" height="781" alt="image" src="https://github.com/user-attachments/assets/5d26278d-e8c5-4a1d-9288-034e2587278c" />
+
  | _print_ |
 
 | Detalhe | Favoritos | Estado de erro |
