@@ -7,10 +7,7 @@ App Android que mostra o catálogo de filmes do Studio Ghibli, permite buscar po
 **Studio Ghibli API** — `https://ghibliapi.vercel.app/` (sem cadastro e sem chave).
 Usamos `GET /films` (lista com título, diretor, ano, duração, nota Rotten Tomatoes, sinopse, pôster e banner) e `GET /films/{id}` (detalhe).
 
-> Esta API não está na lista do enunciado: **precisa de aprovação do professor**. O wireframe do Figma previa o TMDB, mas ele exige chave de API.
-
 ## Prints
-(4 a 6 imagens: login, cadastro, lista, detalhe, favoritos, estado de erro)
 
 | Login | Cadastro | Lista |
 |---|---|---|
