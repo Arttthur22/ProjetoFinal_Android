@@ -19,7 +19,6 @@ private val CineColorScheme = darkColorScheme(
     error = AccentSoft
 )
 
-/** O app usa sempre o tema escuro do wireframe (sem cores dinâmicas). */
 @Composable
 fun CineCatalogTheme(content: @Composable () -> Unit) {
     MaterialTheme(

@@ -11,7 +11,6 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
 import java.io.IOException
 
-/** Único ponto de acesso ao Retrofit e ao FavoritoDao. As telas só falam com ele via ViewModel. */
 class MovieRepository(
     private val api: GhibliApi,
     private val favoritoDao: FavoritoDao,
@@ -24,7 +23,6 @@ class MovieRepository(
         return safeCall { api.getFilms().map { it.toMovie() } }.onSuccess { cache = it }
     }
 
-    /** Procura o filme no cache, depois nos favoritos do usuário (offline) e por fim na API. */
     suspend fun getMovie(id: String): Result<Movie> {
         cache.firstOrNull { it.id == id }?.let { return Result.success(it) }
         val uid = session.userId.value

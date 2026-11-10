@@ -7,7 +7,6 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import arthur.example.projeto_final.data.AppContainer
 
-/** Fábrica única dos ViewModels (injeta os repositories do AppContainer). */
 object AppViewModelProvider {
 
     val Factory = viewModelFactory {

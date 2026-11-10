@@ -3,7 +3,6 @@ package arthur.example.projeto_final.network
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-/** Resposta crua da Studio Ghibli API (https://ghibliapi.vercel.app/films). */
 @Serializable
 data class FilmDto(
     val id: String,

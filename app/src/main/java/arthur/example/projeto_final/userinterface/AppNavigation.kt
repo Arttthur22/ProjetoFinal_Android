@@ -44,7 +44,6 @@ import arthur.example.projeto_final.viewmodel.MoviesViewModel
 import kotlinx.serialization.Serializable
 import kotlin.reflect.KClass
 
-// ---------- Rotas type-safe ----------
 @Serializable data class LoginRoute(val registered: Boolean = false)
 @Serializable data object RegisterRoute
 @Serializable data object HomeRoute
@@ -52,7 +51,6 @@ import kotlin.reflect.KClass
 @Serializable data object FavoritesRoute
 @Serializable data object ProfileRoute
 
-/** Rota da tela de detalhe: recebe o id do filme escolhido. */
 @Serializable data class DetailRoute(val movieId: String)
 
 private data class TabItem(
@@ -86,10 +84,8 @@ fun AppNavigation() {
     val usuario by authVm.usuario.collectAsStateWithLifecycle()
     val authState by authVm.state.collectAsStateWithLifecycle()
 
-    // Sessão guardada em SharedPreferences: quem já entrou abre direto no app.
     val startDestination: Any = remember { if (authVm.userId.value != null) HomeRoute else LoginRoute() }
 
-    // Guarda de navegação: só quem entrou vê o app; ao sair (ou entrar) a pilha é limpa.
     LaunchedEffect(userId) {
         val dest = navController.currentDestination ?: return@LaunchedEffect
         val onAuth = dest.hasRoute(LoginRoute::class) || dest.hasRoute(RegisterRoute::class)
@@ -100,7 +96,6 @@ fun AppNavigation() {
         }
     }
 
-    // Cadastro concluído: volta ao login com um aviso.
     LaunchedEffect(authState.registered) {
         if (authState.registered) {
             navController.navigate(LoginRoute(registered = true)) { popUpTo<RegisterRoute> { inclusive = true } }

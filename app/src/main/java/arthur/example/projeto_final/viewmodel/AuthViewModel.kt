@@ -19,13 +19,11 @@ import kotlinx.coroutines.launch
 data class AuthUiState(
     val loading: Boolean = false,
     val error: String? = null,
-    /** true logo depois de um cadastro bem-sucedido; a tela navega para o login e consome o evento. */
     val registered: Boolean = false
 )
 
 class AuthViewModel(private val repository: AuthRepository) : ViewModel() {
 
-    /** Id do usuário logado (null = deslogado). Lido do SharedPreferences, então sobrevive ao fechar o app. */
     val userId: StateFlow<Long?> = repository.sessionUserId
 
     @OptIn(ExperimentalCoroutinesApi::class)
@@ -41,7 +39,6 @@ class AuthViewModel(private val repository: AuthRepository) : ViewModel() {
         viewModelScope.launch {
             _state.update { AuthUiState(loading = true) }
             when (val result = repository.login(email, senha)) {
-                // Em caso de sucesso o userId muda e a navegação reage a isso.
                 is AuthResult.Success -> _state.update { AuthUiState() }
                 is AuthResult.Failure -> _state.update { AuthUiState(error = result.message) }
             }
@@ -61,6 +58,5 @@ class AuthViewModel(private val repository: AuthRepository) : ViewModel() {
 
     fun logout() = repository.logout()
 
-    /** Limpa erros e eventos pendentes (ao trocar entre login e cadastro). */
     fun clearState() = _state.update { AuthUiState() }
 }

@@ -32,7 +32,6 @@ class MoviesViewModel(private val repository: MovieRepository) : ViewModel() {
     private val _director = MutableStateFlow(ALL_DIRECTORS)
     val director: StateFlow<String> = _director.asStateFlow()
 
-    /** Favoritos do usuário logado (vêm do Room; trocam sozinhos quando outra conta entra). */
     val favorites: StateFlow<List<Movie>> = repository.observeFavorites()
         .stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
 

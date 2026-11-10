@@ -9,7 +9,6 @@ sealed interface AuthResult {
     data class Failure(val message: String) : AuthResult
 }
 
-/** Toda a lógica de cadastro, login e sessão fica aqui, nunca dentro da tela. */
 class AuthRepository(
     private val usuarioDao: UsuarioDao,
     private val session: SessionManager
@@ -42,7 +41,6 @@ class AuthRepository(
 
         return withContext(Dispatchers.IO) {
             val usuario = usuarioDao.buscarPorEmail(emailLimpo)
-            // Mesma mensagem para e-mail inexistente e senha errada (não revela qual campo errou).
             if (usuario == null || usuario.senhaHash != senha.sha256()) {
                 AuthResult.Failure("E-mail ou senha incorretos.")
             } else {

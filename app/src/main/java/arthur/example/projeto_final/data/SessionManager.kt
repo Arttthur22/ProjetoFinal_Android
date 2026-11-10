@@ -5,7 +5,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-/** Guarda o id do usuário logado em SharedPreferences, para a sessão sobreviver ao fechar o app. */
 class SessionManager(context: Context) {
 
     private val prefs = context.applicationContext

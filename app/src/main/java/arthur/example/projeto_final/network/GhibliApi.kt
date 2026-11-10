@@ -3,7 +3,6 @@ package arthur.example.projeto_final.network
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-/** Interface do Retrofit. Funções suspend: o Retrofit já executa fora da Main Thread. */
 interface GhibliApi {
 
     @GET("films")

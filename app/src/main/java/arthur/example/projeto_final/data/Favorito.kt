@@ -4,11 +4,6 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 
-/**
- * Filme favoritado por um usuário. Guardamos uma cópia dos dados do filme para que a
- * lista de favoritos funcione mesmo sem internet. A chave (usuarioId, movieId) garante
- * que cada usuário só enxerga os próprios favoritos.
- */
 @Entity(
     tableName = "favoritos",
     primaryKeys = ["usuarioId", "movieId"],

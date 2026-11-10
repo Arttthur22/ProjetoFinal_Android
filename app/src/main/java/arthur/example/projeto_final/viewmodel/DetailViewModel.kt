@@ -22,7 +22,6 @@ class DetailViewModel(private val repository: MovieRepository) : ViewModel() {
 
     private var loadedId: String? = null
 
-    /** Recebe o id que chegou pela rota type-safe e carrega o filme certo. */
     fun load(movieId: String, force: Boolean = false) {
         if (!force && loadedId == movieId && _state.value is DetailUiState.Success) return
         loadedId = movieId

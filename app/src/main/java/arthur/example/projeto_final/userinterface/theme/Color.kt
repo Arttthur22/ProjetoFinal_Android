@@ -2,7 +2,6 @@ package arthur.example.projeto_final.userinterface.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Paleta extraída do wireframe do Figma (CineCatalog)
 val Ink = Color(0xFF10141F)
 val SurfaceDark = Color(0xFF1B2230)
 val SurfaceLight = Color(0xFF252D3E)

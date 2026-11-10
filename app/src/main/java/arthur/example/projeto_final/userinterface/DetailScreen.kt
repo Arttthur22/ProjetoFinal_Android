@@ -60,7 +60,6 @@ fun DetailScreen(
             is DetailUiState.Error -> ErrorState(state.message, onRetry, Modifier.align(Alignment.Center))
             is DetailUiState.Success -> DetailContent(state.movie, isFavorite, onToggleFavorite)
         }
-        // Botão voltar sempre visível, inclusive nos estados de carregando e erro
         IconButton(
             onClick = onBack,
             modifier = Modifier.padding(top = statusBarTop() + 12.dp, start = 18.dp).size(42.dp)

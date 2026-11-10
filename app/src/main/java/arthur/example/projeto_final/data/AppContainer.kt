@@ -3,7 +3,6 @@ package arthur.example.projeto_final.data
 import android.content.Context
 import arthur.example.projeto_final.network.RetrofitInstance
 
-/** Cria (uma única vez) o banco, a sessão e os repositories. */
 class AppContainer private constructor(context: Context) {
 
     private val database = AppDatabase.getInstance(context)
